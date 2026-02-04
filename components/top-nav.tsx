@@ -108,10 +108,9 @@ export function TopNav() {
 
           {/* Tab Strip - Desktop */}
           <nav
-            className="tabs"
+            className="hidden md:flex"
             aria-label="Primary"
             style={{
-              display: "flex",
               alignItems: "center",
               gap: 8,
               height: 40,
@@ -253,7 +252,7 @@ export function TopNav() {
             />
             {/* Name */}
             <span
-              className="username"
+              className="hidden md:inline"
               style={{
                 fontSize: 13,
                 fontWeight: 500,
@@ -272,7 +271,7 @@ export function TopNav() {
 
           {/* Mobile Menu Button */}
           <button
-            className="iconbtn mobile-menu-btn"
+            className="md:hidden flex"
             aria-label="Menu"
             style={{
               width: 36,
@@ -280,7 +279,6 @@ export function TopNav() {
               borderRadius: 10,
               background: "transparent",
               border: "1px solid transparent",
-              display: "none",
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
@@ -340,19 +338,6 @@ export function TopNav() {
         </div>
       )}
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .tabs {
-            display: none !important;
-          }
-          .mobile-menu-btn {
-            display: inline-flex !important;
-          }
-          .username {
-            display: none;
-          }
-        }
-      `}</style>
     </header>
   )
 }
